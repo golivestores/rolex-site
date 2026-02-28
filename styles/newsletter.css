@@ -1,0 +1,98 @@
+/* ===== 12. Newsletter — Dark accent section ===== */
+.newsletter {
+  background: var(--color-ink);
+  padding: var(--space-5xl) 0;
+}
+
+.newsletter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4xl);
+}
+
+.newsletter .section-subtitle {
+  color: var(--color-gold);
+}
+
+.newsletter-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+}
+
+.newsletter-desc {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 380px;
+}
+
+.newsletter-form {
+  flex: 1;
+  max-width: 480px;
+}
+
+.newsletter-input-wrap {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color var(--transition-base);
+}
+
+.newsletter-input-wrap:focus-within {
+  border-color: var(--color-gold);
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 16px 20px;
+  background: transparent;
+  color: var(--color-white);
+  font-size: var(--text-base);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Gold button override */
+.newsletter .btn-primary {
+  background: var(--color-gold);
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.newsletter .btn-primary::before {
+  background: var(--color-gold-light);
+}
+
+.newsletter .btn-primary:hover {
+  color: var(--color-ink);
+}
+
+.newsletter-privacy {
+  margin-top: var(--space-md);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.newsletter-privacy a {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .newsletter-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2xl);
+  }
+  .newsletter-desc { max-width: none; }
+  .newsletter-form { width: 100%; max-width: none; }
+  .newsletter-input-wrap { flex-direction: column; }
+  .newsletter-input { text-align: center; }
+  .newsletter .btn-primary { width: 100%; justify-content: center; }
+  .newsletter-privacy { text-align: center; }
+}

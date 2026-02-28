@@ -1,0 +1,188 @@
+/* ===== 7. Best Sellers — Light ===== */
+.bestsellers {
+  background: var(--color-bg);
+}
+
+/* Tabs */
+.bestsellers-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  padding: 10px 26px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.tab-btn:hover {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.tab-btn.active {
+  color: var(--color-white);
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+/* Grid */
+.bestsellers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.product-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.product-card:hover {
+  border-color: var(--color-ink);
+  box-shadow: var(--shadow-md);
+}
+
+.product-badge {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  z-index: 3;
+  font-size: 10px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  padding: 4px 12px;
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.product-badge.badge-new {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.product-badge.badge-limited {
+  background: var(--color-error);
+  color: var(--color-white);
+}
+
+.product-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+.product-actions {
+  position: absolute;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all var(--transition-base);
+}
+
+.product-card:hover .product-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-action-btn {
+  width: 38px;
+  height: 38px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.product-action-btn:hover {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-ink);
+}
+
+.product-details {
+  padding: var(--space-lg);
+}
+
+.product-collection {
+  font-size: 10px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.product-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  margin-bottom: var(--space-sm);
+}
+
+.product-price {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.product-card.hidden {
+  display: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .bestsellers-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .bestsellers-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+  .bestsellers-tabs { gap: 4px; }
+  .tab-btn { padding: 8px 16px; font-size: var(--text-xs); }
+}
+
+@media (max-width: 480px) {
+  .bestsellers-grid { gap: var(--space-sm); }
+  .product-details { padding: var(--space-md); }
+  .product-name { font-size: var(--text-base); }
+}

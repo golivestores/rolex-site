@@ -1,0 +1,303 @@
+/* ===== Best Sellers — 4×2 Grid ===== */
+
+.bs-section {
+  background: var(--color-surface);
+  padding: var(--space-4xl) 0;
+}
+
+/* ── Header Row ── */
+.bs-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.bs-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.bs-filters {
+  display: flex;
+  gap: 0;
+}
+
+.bs-filter {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  padding: 6px 18px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-left: -1px;
+}
+
+.bs-filter:first-child {
+  margin-left: 0;
+  border-radius: 0;
+}
+
+.bs-filter:last-child {
+  border-radius: 0;
+}
+
+.bs-filter.active {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-ink);
+  z-index: 1;
+  position: relative;
+}
+
+.bs-filter:hover:not(.active) {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+  z-index: 1;
+  position: relative;
+}
+
+/* Brand logo filter buttons */
+.bs-filter-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bs-brand-icon {
+  flex-shrink: 0;
+}
+
+.bs-shop-all {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-ink);
+  padding: 12px 32px;
+  border-radius: 0;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.bs-shop-all:hover {
+  background: var(--color-gold-dark);
+  color: var(--color-white);
+}
+
+/* ── Product Grid ── */
+.bs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl) var(--space-lg);
+}
+
+/* ── Product Card ── */
+.bs-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.bs-card.bs-hidden {
+  display: none;
+}
+
+/* Badge */
+.bs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 0;
+  margin: 0 auto var(--space-md);
+  color: var(--color-ink);
+  background: var(--color-surface);
+}
+
+/* Image with hover swap */
+.bs-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bs-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4%;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.bs-img-main {
+  opacity: 1;
+}
+
+.bs-img-hover {
+  opacity: 0;
+}
+
+.bs-card:hover .bs-img-main {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.bs-card:hover .bs-img-hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Info */
+.bs-info {
+  margin-bottom: var(--space-md);
+}
+
+.bs-collection {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin-bottom: 2px;
+}
+
+.bs-variant {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.bs-price {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-ink);
+  margin-bottom: 6px;
+}
+
+/* Action Button */
+.bs-actions {
+  margin-top: var(--space-md);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.bs-card:hover .bs-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bs-btn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  padding: 12px 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bs-btn-add {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border: none;
+}
+
+.bs-btn-add:hover {
+  background: var(--color-gold-dark);
+  color: var(--color-white);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .bs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bs-header {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .bs-title {
+    font-size: var(--text-2xl);
+    width: 100%;
+  }
+
+  .bs-shop-all {
+    margin-left: 0;
+  }
+
+  .bs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg) var(--space-md);
+  }
+
+  .bs-actions {
+    opacity: 1;
+    transform: none;
+  }
+
+  .bs-btn {
+    padding: 10px 0;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md) var(--space-sm);
+  }
+
+  .bs-badge {
+    font-size: 9px;
+    padding: 3px 10px;
+  }
+
+  .bs-actions {
+    opacity: 1;
+    transform: none;
+  }
+}

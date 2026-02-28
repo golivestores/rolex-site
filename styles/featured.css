@@ -1,0 +1,161 @@
+/* ===== 4. Editorial Banner — Full-bleed Lifestyle ===== */
+
+.editorial-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+/* ── Background Image ── */
+.editorial-img {
+  position: absolute;
+  inset: 0;
+}
+
+.editorial-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: scale(1);
+  transition: transform 12s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.editorial-banner:hover .editorial-img img {
+  transform: scale(1.04);
+}
+
+/* ── Dark Overlay ── */
+.editorial-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.15) 70%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+/* ── Text Content ── */
+.editorial-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: var(--space-4xl) var(--space-4xl) var(--space-3xl);
+  max-width: 640px;
+}
+
+.editorial-tagline {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  padding-left: 48px;
+}
+
+.editorial-tagline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 36px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.editorial-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: var(--weight-medium);
+  line-height: 1.1;
+  color: var(--color-white);
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-lg);
+}
+
+.editorial-sub {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--space-2xl);
+  max-width: 420px;
+}
+
+.editorial-cta {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-white);
+  padding: 15px 40px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(4px);
+}
+
+.editorial-cta:hover {
+  background: var(--color-white);
+  color: var(--color-ink);
+  border-color: var(--color-white);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .editorial-banner {
+    height: 70vh;
+    min-height: 480px;
+  }
+
+  .editorial-content {
+    padding: var(--space-3xl) var(--space-2xl) var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .editorial-banner {
+    height: 65vh;
+    min-height: 440px;
+  }
+
+  .editorial-content {
+    padding: var(--space-2xl) var(--space-lg) var(--space-xl);
+    max-width: 100%;
+  }
+
+  .editorial-heading {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+
+  .editorial-sub {
+    font-size: 14px;
+  }
+
+  .editorial-cta {
+    padding: 13px 28px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editorial-banner {
+    height: 60vh;
+    min-height: 380px;
+  }
+}

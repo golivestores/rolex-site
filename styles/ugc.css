@@ -1,0 +1,164 @@
+/* ===== 10. TikTok Video Slider — Full Bleed ===== */
+.ugc-section {
+  background: var(--color-bg-alt);
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+  overflow: hidden;
+}
+
+.ugc-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  padding: 0 var(--container-padding);
+}
+
+.ugc-header .section-title {
+  color: var(--color-ink);
+}
+
+/* ── Full-Bleed Horizontal Slider ── */
+.ugc-slider {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.ugc-slider.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+.ugc-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Video Card — 6 visible, content overflows for scroll ── */
+.ugc-card {
+  flex: 0 0 calc((100vw - 40px) / 6);
+  aspect-ratio: 9/16;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  scroll-snap-align: start;
+  background: var(--color-ink);
+}
+
+.ugc-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow), filter var(--transition-base);
+  filter: brightness(0.85);
+  pointer-events: none;
+}
+
+.ugc-card:hover img {
+  transform: scale(1.06);
+  filter: brightness(1);
+}
+
+/* ── Play Button ── */
+.ugc-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  z-index: 2;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.ugc-play svg {
+  margin-left: 4px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.ugc-card:hover .ugc-play {
+  background: rgba(0, 0, 0, 0.55);
+  border-color: var(--color-white);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ── Bottom Info Bar ── */
+.ugc-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg) var(--space-md) var(--space-md);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ugc-tiktok-icon {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.ugc-card-info span {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  color: var(--color-white);
+  letter-spacing: var(--tracking-wide);
+}
+
+.ugc-views {
+  margin-left: auto;
+  opacity: 0.7;
+  font-size: 10px !important;
+  letter-spacing: var(--tracking-normal) !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .ugc-card {
+    flex: 0 0 calc((100vw - 28px) / 4);
+  }
+}
+
+@media (max-width: 768px) {
+  .ugc-card {
+    flex: 0 0 calc((100vw - 16px) / 3);
+  }
+
+  .ugc-play {
+    width: 52px;
+    height: 52px;
+  }
+
+  .ugc-play svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ugc-card {
+    flex: 0 0 calc((100vw - 8px) / 2.2);
+  }
+
+  .ugc-play {
+    width: 46px;
+    height: 46px;
+  }
+}

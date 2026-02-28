@@ -1,0 +1,85 @@
+/* ===== CHRONOS — Masculine Luxury Design Tokens ===== */
+:root {
+  /* ── Palette ── */
+  --color-bg:          #F5F5F3;
+  --color-bg-alt:      #EDEDEB;
+  --color-bg-warm:     #E5E5E2;
+  --color-surface:     #FFFFFF;
+  --color-ink:         #111111;
+  --color-ink-soft:    #3D3D3D;
+  --color-ink-muted:   #6B6B6B;
+  --color-gold:        #B8976A;
+  --color-gold-light:  #CCAE7E;
+  --color-gold-dark:   #96784C;
+  --color-border:      #D8D8D6;
+  --color-border-light:#E8E8E6;
+  --color-dark:        #111111;
+  --color-dark-soft:   #2A2723;
+  --color-white:       #FFFFFF;
+  --color-error:       #B44533;
+
+  /* ── Typography ── */
+  --font-heading: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  --text-xs:   0.75rem;     /* 12px */
+  --text-sm:   0.8125rem;   /* 13px */
+  --text-base: 0.9375rem;   /* 15px */
+  --text-lg:   1.0625rem;   /* 17px */
+  --text-xl:   1.25rem;     /* 20px */
+  --text-2xl:  1.5rem;      /* 24px */
+  --text-3xl:  2rem;        /* 32px */
+  --text-4xl:  2.75rem;     /* 44px */
+  --text-5xl:  3.5rem;      /* 56px */
+  --text-6xl:  5rem;        /* 80px */
+
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ── Spacing (8px grid) ── */
+  --space-xs:  0.25rem;   /* 4 */
+  --space-sm:  0.5rem;    /* 8 */
+  --space-md:  1rem;      /* 16 */
+  --space-lg:  1.5rem;    /* 24 */
+  --space-xl:  2rem;      /* 32 */
+  --space-2xl: 3rem;      /* 48 */
+  --space-3xl: 4rem;      /* 64 */
+  --space-4xl: 6rem;      /* 96 */
+  --space-5xl: 8rem;      /* 128 */
+
+  /* ── Layout ── */
+  --max-width: 1400px;
+  --container-padding: 2.5rem;
+  --nav-height: 72px;
+  --announcement-height: 38px;
+
+  /* ── Motion ── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast:   0.2s var(--ease-out-quart);
+  --transition-base:   0.35s var(--ease-out-expo);
+  --transition-slow:   0.6s var(--ease-out-expo);
+  --transition-slower:  1s var(--ease-out-expo);
+
+  /* ── Radii ── */
+  --radius-sm:   0;
+  --radius-md:   0;
+  --radius-lg:   0;
+  --radius-full: 0;
+
+  /* ── Elevation ── */
+  --shadow-xs:   0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md:   0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg:   0 12px 40px rgba(0, 0, 0, 0.10);
+
+  /* ── Tracking ── */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.06em;
+  --tracking-wider:    0.12em;
+  --tracking-widest:   0.25em;
+}

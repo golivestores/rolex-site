@@ -1,0 +1,219 @@
+/* ===== 5. Collections — Horizontal Scroll Pinned (VC Style) ===== */
+
+/* Outer wrapper — tall to provide scroll distance */
+.collections-scroll {
+  position: relative;
+  /* height set dynamically by JS, fallback: */
+  height: 300vh;
+}
+
+/* Sticky viewport */
+.collections-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+/* ── Header Area ── */
+.collections-header {
+  flex-shrink: 0;
+  text-align: center;
+  padding: var(--space-3xl) var(--container-padding) var(--space-xl);
+}
+
+.collections-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.collections-subtitle svg {
+  opacity: 0.5;
+}
+
+.collections-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: var(--weight-medium);
+  line-height: 1.45;
+  color: var(--color-ink);
+  max-width: 720px;
+  margin: 0 auto;
+  letter-spacing: var(--tracking-normal);
+}
+
+/* ── Product Strip ── */
+.collections-track-clip {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.collections-track {
+  display: flex;
+  gap: 1px;
+  height: 100%;
+  will-change: transform;
+  transition: none;
+}
+
+/* ── Collection Card ── */
+.collection-card {
+  flex-shrink: 0;
+  width: 22vw;
+  min-width: 280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border-light);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-img {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-xl);
+}
+
+.collection-img img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.collection-card:hover .collection-img img {
+  transform: scale(1.06);
+}
+
+/* Info bar at bottom */
+.collection-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--color-border-light);
+  flex-direction: column;
+}
+
+.collection-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  letter-spacing: var(--tracking-wide);
+}
+
+.collection-arrow {
+  color: var(--color-ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.collection-card:hover .collection-arrow {
+  transform: translateY(3px);
+}
+
+/* ── Final CTA Card ── */
+.collection-card-cta {
+  width: 22vw;
+  min-width: 280px;
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+}
+
+.collection-card-cta-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.collection-card-cta-inner svg:first-child {
+  color: var(--color-ink-muted);
+  opacity: 0.5;
+}
+
+.collection-card-cta-inner span {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  line-height: 1.4;
+  letter-spacing: var(--tracking-wide);
+}
+
+.collection-card-cta-inner svg:last-child {
+  color: var(--color-ink-muted);
+  opacity: 0.5;
+}
+
+.collection-card-cta:hover .collection-card-cta-inner span {
+  color: var(--color-gold-dark);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .collections-title {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  }
+
+  .collection-card {
+    width: 32vw;
+    min-width: 240px;
+  }
+
+  .collection-card-cta {
+    width: 32vw;
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collections-header {
+    padding: var(--space-2xl) var(--container-padding) var(--space-md);
+  }
+
+  .collections-title {
+    font-size: 1.2rem;
+  }
+
+  .collections-title br {
+    display: none;
+  }
+
+  .collection-card {
+    width: 55vw;
+    min-width: 220px;
+  }
+
+  .collection-card-cta {
+    width: 55vw;
+    min-width: 220px;
+  }
+}
