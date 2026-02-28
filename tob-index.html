@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHRONOCRAFT — Private Label Watch Manufacturing | OEM · ODM · Custom</title>
+<meta name="description" content="Professional watch OEM/ODM manufacturer. Custom dials, straps, private label programs for brands, retailers and corporate buyers. Low MOQ from 50pcs. Global shipping.">
+<meta name="keywords" content="watch OEM manufacturer, ODM watch factory, private label watches, custom watch dial, watch wholesale, watch manufacturer China">
+<meta property="og:title" content="CHRONOCRAFT Watch Manufacturing">
+<meta property="og:description" content="Your Brand. Our Craft. OEM/ODM watch manufacturing from 50pcs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.6}
+a{text-decoration:none;color:inherit;transition:.2s}
+ul,ol{list-style:none}
+img{max-width:100%;display:block}
+button,input,select,textarea{font-family:inherit;border:none;outline:none;background:none;color:inherit;font-size:inherit}
+
+/* ===== VARIABLES ===== */
+:root{
+  --bg:#FFFFFF;
+  --bg-alt:#F5F7FA;
+  --bg-dark:#0F172A;
+  --surface:#FFFFFF;
+  --text:#0F172A;
+  --text-secondary:#475569;
+  --text-muted:#94A3B8;
+  --green:#059669;
+  --green-light:#ECFDF5;
+  --green-dark:#047857;
+  --border:#E2E8F0;
+  --border-light:#F1F5F9;
+  --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:0 4px 12px rgba(0,0,0,0.07);
+  --shadow-lg:0 10px 40px rgba(0,0,0,0.08);
+  --radius:8px;
+  --radius-lg:12px;
+  --font-display:'Playfair Display',serif;
+}
+
+/* ===== UTILITIES ===== */
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+.section{padding:96px 0}
+.section-alt{background:var(--bg-alt)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:8px;margin-bottom:16px}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--green);display:inline-block}
+.section-title{font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--text);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+.section-sub{font-size:17px;color:var(--text-secondary);max-width:560px;line-height:1.7}
+.section-header{margin-bottom:56px}
+.green{color:var(--green)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-size:14px;font-weight:600;border-radius:6px;transition:.2s;cursor:pointer}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn-outline{border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--green);color:var(--green)}
+.btn-dark{background:var(--bg-dark);color:#fff}
+.btn-dark:hover{background:#1E293B;transform:translateY(-1px)}
+
+/* Scroll Reveal */
+.sr{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.sr.visible{opacity:1;transform:translateY(0)}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;width:100%;height:64px;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-logo{font-size:20px;font-weight:900;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+.nav-logo .logo-mark{width:28px;height:28px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text-secondary);transition:.2s}
+.nav-links a:hover{color:var(--green)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-phone{font-size:13px;color:var(--text-secondary);font-weight:500}
+.nav-cta{padding:9px 24px;background:var(--green);color:#fff;font-size:13px;font-weight:600;border-radius:6px;transition:.2s}
+.nav-cta:hover{background:var(--green-dark)}
+
+/* ===== HERO (left text + right video) ===== */
+.hero{padding-top:64px;background:var(--bg-dark);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;align-items:center}
+.hero-content{padding:80px 56px 80px 56px;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 18px;border-radius:100px;margin-bottom:28px}
+.hero-badge .badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(36px,4vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;margin-bottom:24px;color:#fff}
+.hero h1 .accent{color:var(--green)}
+.hero-desc{font-size:17px;color:rgba(255,255,255,.65);line-height:1.7;max-width:480px;margin-bottom:36px}
+.hero-btns{display:flex;gap:12px;margin-bottom:48px;flex-wrap:wrap}
+.hero-btns .btn-primary{background:var(--green);color:#fff}
+.hero-btns .btn-outline{border-color:rgba(255,255,255,.25);color:#fff}
+.hero-btns .btn-outline:hover{border-color:var(--green);color:var(--green)}
+.hero-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid rgba(255,255,255,.1);padding-top:28px}
+.kpi .kpi-num{font-size:36px;font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1}
+.kpi .kpi-num span{color:var(--green)}
+.kpi .kpi-label{font-size:11px;color:rgba(255,255,255,.4);margin-top:6px;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+.hero-video{position:relative;height:100%;min-height:100vh;overflow:hidden}
+.hero-video video{width:100%;height:100%;object-fit:cover;display:block}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(90deg,var(--bg-dark) 0%,transparent 30%);z-index:1;pointer-events:none}
+
+/* ===== TICKER ===== */
+.ticker{border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;height:48px;display:flex;align-items:center;background:var(--bg-alt)}
+.ticker-track{display:flex;animation:ticker 25s linear infinite;white-space:nowrap}
+.ticker-item{display:flex;align-items:center;gap:8px;padding:0 40px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);font-weight:600;flex-shrink:0}
+.ticker-item .t-dot{width:4px;height:4px;background:var(--green);border-radius:50%}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== PRODUCTS SHOWCASE ===== */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:.3s;cursor:default;position:relative}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--green)}
+.product-card-img{padding:32px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;aspect-ratio:1;overflow:hidden}
+.product-card-img img{width:75%;height:auto;object-fit:contain;transition:.3s}
+.product-card:hover .product-card-img img{transform:scale(1.05)}
+.product-card-body{padding:20px}
+.product-card-body h4{font-size:15px;font-weight:700;margin-bottom:4px}
+.product-card-body p{font-size:13px;color:var(--text-muted)}
+.product-badge{position:absolute;top:16px;right:16px;background:var(--green-light);color:var(--green);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.05em}
+
+/* ===== BUYER TABS ===== */
+.tabs-bar{display:flex;gap:0;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:40px;background:var(--surface)}
+.tab-btn{flex:1;padding:20px 24px;cursor:pointer;border-right:1px solid var(--border);transition:.2s;position:relative;text-align:left}
+.tab-btn:last-child{border-right:none}
+.tab-btn.active{background:var(--green-light)}
+.tab-btn.active::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--green)}
+.tab-btn .tab-emoji{font-size:20px;margin-bottom:6px}
+.tab-btn .tab-title{font-size:14px;font-weight:700;color:var(--text)}
+.tab-btn .tab-sub{font-size:12px;color:var(--text-muted);margin-top:2px}
+
+.tab-panel{display:none;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface)}
+.tab-panel.active{display:grid;grid-template-columns:1fr 1fr}
+.panel-left{padding:48px}
+.panel-right{padding:48px;background:var(--bg-alt);border-left:1px solid var(--border)}
+.panel-tag{display:inline-block;font-size:12px;font-weight:600;color:var(--green);background:var(--green-light);padding:6px 14px;border-radius:100px;margin-bottom:20px}
+.panel-title{font-size:clamp(26px,3vw,36px);font-weight:900;line-height:1.1;margin-bottom:14px;letter-spacing:-.02em}
+.panel-desc{font-family:var(--font-display);font-style:italic;font-size:16px;color:var(--text-secondary);line-height:1.6;margin-bottom:28px}
+.feature-list{display:flex;flex-direction:column}
+.feature-item{padding:18px 0;border-bottom:1px solid var(--border);display:flex;gap:14px}
+.feature-item:first-child{border-top:1px solid var(--border)}
+.feature-icon{font-size:20px;flex-shrink:0;width:40px;height:40px;background:var(--bg-alt);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.feature-content .f-title{font-size:14px;font-weight:700;margin-bottom:2px}
+.feature-content .f-desc{font-size:13px;color:var(--text-secondary);line-height:1.5}
+.moq-big .moq-num{font-size:56px;font-weight:900;line-height:1;letter-spacing:-.03em}
+.moq-big .moq-unit{font-size:24px;font-weight:900;color:var(--green);margin-left:2px}
+.moq-big .moq-label{font-size:13px;color:var(--text-muted);margin-top:4px;margin-bottom:28px}
+.checklist li{font-size:13px;color:var(--text-secondary);padding:6px 0;display:flex;align-items:center;gap:10px}
+.checklist li::before{content:'✓';color:var(--green);font-weight:800;font-size:14px}
+
+/* ===== SERVICES ===== */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 24px;position:relative;overflow:hidden;transition:.2s}
+.service-card:hover{border-color:var(--green);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.service-num{font-size:48px;font-weight:900;color:var(--border);line-height:1;margin-bottom:20px}
+.service-icon{width:48px;height:48px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.service-name{font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+.service-desc{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px}
+.service-moq{font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.08em;padding:6px 12px;background:var(--green-light);border-radius:100px;display:inline-block;margin-bottom:14px}
+.service-tags{display:flex;flex-wrap:wrap;gap:6px}
+.service-tags span{font-size:11px;padding:4px 10px;border:1px solid var(--border);border-radius:100px;color:var(--text-muted);font-weight:500;transition:.2s}
+.service-card:hover .service-tags span{border-color:var(--green);color:var(--green)}
+
+/* ===== FACTORY (image-heavy) ===== */
+.factory{position:relative;overflow:hidden;padding:0}
+.factory-hero{position:relative;height:520px;overflow:hidden}
+.factory-hero img{width:100%;height:100%;object-fit:cover}
+.factory-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,23,42,.82),rgba(5,150,105,.5));display:flex;align-items:center}
+.factory-hero-content{padding:0 80px;max-width:700px}
+.factory-hero-content .eyebrow{color:#fff}
+.factory-hero-content .eyebrow::before{background:#fff}
+.factory-hero-content h2{font-size:clamp(36px,5vw,56px);font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.03em;margin-bottom:16px}
+.factory-hero-content p{font-size:17px;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:32px}
+.factory-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:48px 80px;background:var(--bg-dark)}
+.factory-stat{text-align:center}
+.factory-stat .fs-num{font-size:40px;font-weight:900;color:#fff;line-height:1}
+.factory-stat .fs-num span{color:var(--green)}
+.factory-stat .fs-label{font-size:12px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-top:6px;font-weight:500}
+
+/* factory gallery */
+.factory-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.factory-gallery-item{position:relative;overflow:hidden;aspect-ratio:4/3}
+.factory-gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.factory-gallery-item:hover img{transform:scale(1.05)}
+.factory-gallery-item .fg-label{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:13px;font-weight:600}
+
+/* ===== CUSTOMIZATION ===== */
+.custom-layout{display:grid;grid-template-columns:260px 1fr;gap:0;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface)}
+.custom-nav{background:var(--bg-alt);border-right:1px solid var(--border)}
+.custom-nav-item{padding:18px 20px;cursor:pointer;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;transition:.2s;font-size:14px}
+.custom-nav-item:last-child{border-bottom:none}
+.custom-nav-item .cn-dot{width:8px;height:8px;border-radius:50%;border:2px solid var(--border);transition:.2s;flex-shrink:0}
+.custom-nav-item.active .cn-dot{background:var(--green);border-color:var(--green)}
+.custom-nav-item.active{background:var(--surface);font-weight:700}
+.custom-nav-item:hover{background:var(--surface)}
+.custom-nav-item .cn-title{font-weight:600;font-size:14px}
+.custom-nav-item .cn-sub{font-size:12px;color:var(--text-muted)}
+.custom-panel{display:none;padding:40px}
+.custom-panel.active{display:block}
+.custom-panel-title{font-size:28px;font-weight:900;letter-spacing:-.02em;margin-bottom:10px}
+.custom-panel-desc{font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:28px;max-width:600px}
+.options-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.option-card{padding:20px;border:1px solid var(--border);border-radius:var(--radius);transition:.2s;cursor:default}
+.option-card:hover{border-color:var(--green);background:var(--green-light)}
+.option-emoji{font-size:24px;margin-bottom:10px}
+.option-name{font-size:13px;font-weight:700;margin-bottom:2px}
+.option-spec{font-size:12px;color:var(--text-muted)}
+.custom-note{display:flex;gap:12px;padding:14px 18px;background:var(--bg-alt);border-radius:var(--radius);font-size:13px;color:var(--text-secondary);align-items:flex-start}
+.custom-note::before{content:'💡';flex-shrink:0}
+
+/* ===== PROCESS (image + text rows) ===== */
+.process-rows{display:flex;flex-direction:column;gap:0}
+.pr-row{display:grid;grid-template-columns:1fr 1fr;min-height:360px;border-bottom:1px solid var(--border)}
+.pr-row:last-child{border-bottom:none}
+.pr-row:nth-child(even){direction:rtl}
+.pr-row:nth-child(even) > *{direction:ltr}
+.pr-img{overflow:hidden;position:relative}
+.pr-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.pr-row:hover .pr-img img{transform:scale(1.04)}
+.pr-img .pr-step-badge{position:absolute;top:20px;left:20px;background:var(--green);color:#fff;font-size:12px;font-weight:800;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2}
+.pr-row:nth-child(even) .pr-step-badge{left:auto;right:20px}
+.pr-text{display:flex;flex-direction:column;justify-content:center;padding:48px 56px}
+.pr-text .pr-icon{font-size:32px;margin-bottom:16px}
+.pr-text h3{font-size:28px;font-weight:900;letter-spacing:-.02em;margin-bottom:12px}
+.pr-text p{font-size:15px;color:var(--text-secondary);line-height:1.7;margin-bottom:20px}
+.pr-text .pr-time{font-size:13px;font-weight:700;color:var(--green);display:inline-flex;align-items:center;gap:8px}
+.pr-text .pr-time::before{content:'';width:20px;height:2px;background:var(--green)}
+
+
+
+/* ===== TESTIMONIALS ===== */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.test-card{padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);transition:.2s;display:flex;flex-direction:column}
+.test-card:hover{border-color:var(--green);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.test-region{font-size:12px;color:var(--text-muted);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.test-region::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%}
+.test-stars{color:#F59E0B;font-size:14px;margin-bottom:14px;letter-spacing:2px}
+.test-quote{font-family:var(--font-display);font-style:italic;font-size:15px;line-height:1.7;color:var(--text-secondary);flex:1;margin-bottom:24px}
+.test-author{display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:16px}
+.test-avatar{width:40px;height:40px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--green);flex-shrink:0}
+.test-name{font-size:13px;font-weight:700}
+.test-role{font-size:12px;color:var(--text-muted)}
+
+/* ===== CTA BANNER ===== */
+.cta-banner{background:linear-gradient(135deg,#059669,#047857);padding:80px;display:flex;align-items:center;justify-content:space-between;gap:48px;position:relative;overflow:hidden;border-radius:0}
+.cta-banner::before{content:'GET A QUOTE';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-size:clamp(60px,10vw,130px);font-weight:900;color:rgba(255,255,255,.06);pointer-events:none;white-space:nowrap;letter-spacing:-.03em}
+.cta-left h2{font-size:clamp(28px,4vw,48px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:10px}
+.cta-left p{font-size:16px;color:rgba(255,255,255,.75)}
+.cta-right .btn-white{display:inline-flex;align-items:center;gap:8px;padding:16px 40px;background:#fff;color:var(--green-dark);font-size:15px;font-weight:700;border-radius:8px;transition:.2s;cursor:pointer;white-space:nowrap}
+.cta-right .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+
+/* ===== CONTACT ===== */
+.contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
+.contact-intro{font-family:var(--font-display);font-style:italic;font-size:18px;color:var(--text-secondary);line-height:1.7;margin-bottom:36px}
+.contact-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border)}
+.contact-row .cl-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);font-weight:700}
+.contact-row .cl-value{font-size:14px;font-weight:500}
+.contact-row .cl-value a:hover{color:var(--green)}
+.lang-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
+.lang-tag{font-size:12px;padding:6px 14px;border:1px solid var(--border);border-radius:100px;font-weight:500}
+
+/* Form */
+.inquiry-form{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.form-row:last-of-type{border-bottom:none}
+.form-row.full{grid-template-columns:1fr}
+.form-group{padding:16px 20px;border-right:1px solid var(--border)}
+.form-group:last-child{border-right:none}
+.form-group label{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px;font-weight:700}
+.form-group input,.form-group select,.form-group textarea{width:100%;font-size:14px;color:var(--text);padding:6px 0}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-muted)}
+.form-group select{cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23059669' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0 center}
+.form-group select option{background:#fff}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-footer{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-top:1px solid var(--border);gap:20px}
+.form-note{font-size:12px;color:var(--text-muted);line-height:1.6;max-width:360px}
+.form-submit{padding:14px 36px;background:var(--green);color:#fff;font-size:14px;font-weight:700;border-radius:6px;cursor:pointer;transition:.2s;white-space:nowrap}
+.form-submit:hover{background:var(--green-dark);transform:translateY(-1px)}
+.form-success{display:none;text-align:center;padding:80px 40px}
+.form-success .fs-icon{font-size:48px;margin-bottom:20px}
+.form-success h3{font-size:28px;font-weight:900;margin-bottom:10px}
+.form-success p{font-size:14px;color:var(--text-secondary)}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--bg-dark);color:#fff;padding:56px 56px 32px}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:48px;margin-bottom:40px}
+.footer-brand .fb-logo{font-size:22px;font-weight:900;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.footer-brand .fb-logo .logo-mark{width:24px;height:24px;background:var(--green);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.footer-brand .fb-tagline{font-family:var(--font-display);font-style:italic;font-size:14px;color:rgba(255,255,255,.5);margin-bottom:4px}
+.footer-brand .fb-est{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-col h5{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:16px;font-weight:700}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.55);padding:4px 0;transition:.2s}
+.footer-col a:hover{color:var(--green)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:rgba(255,255,255,.3)}
+.footer-bottom a{color:rgba(255,255,255,.3);margin-left:20px;transition:.2s}
+.footer-bottom a:hover{color:var(--green)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1100px){
+  .nav-links,.nav-phone{display:none}
+  .hero-grid{grid-template-columns:1fr;min-height:auto}
+  .hero-content{padding:100px 32px 40px}
+  .hero-video{min-height:360px;height:360px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .pr-row{min-height:280px}
+  .pr-text{padding:32px}
+  .test-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-layout{grid-template-columns:1fr}
+  .factory-stats{grid-template-columns:repeat(2,1fr);padding:40px}
+  .factory-hero-content{padding:0 40px}
+  .factory-gallery{grid-template-columns:repeat(2,1fr)}
+  .cta-banner{flex-direction:column;text-align:center;padding:60px 32px}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .container{padding:0 20px}
+  .section{padding:64px 0}
+  .hero-content{padding:88px 20px 32px}
+  .hero-video{min-height:280px;height:280px}
+  .hero-video-overlay{background:linear-gradient(180deg,var(--bg-dark) 0%,transparent 40%)}
+  .hero-kpis{grid-template-columns:repeat(2,1fr);gap:16px}
+  .services-grid,.test-grid{grid-template-columns:1fr}
+  .pr-row{grid-template-columns:1fr;min-height:auto}
+  .pr-row:nth-child(even){direction:ltr}
+  .pr-img{aspect-ratio:16/9}
+  .pr-row:nth-child(even) .pr-step-badge{left:20px;right:auto}
+  .pr-text{padding:28px 20px}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .tab-panel.active{grid-template-columns:1fr}
+  .panel-right{border-left:none;border-top:1px solid var(--border)}
+  .tabs-bar{flex-direction:column}
+  .tab-btn{border-right:none;border-bottom:1px solid var(--border)}
+  .custom-layout{grid-template-columns:1fr}
+  .custom-nav{display:flex;overflow-x:auto;border-right:none;border-bottom:1px solid var(--border)}
+  .custom-nav-item{white-space:nowrap;border-bottom:none;border-right:1px solid var(--border);flex-shrink:0}
+  .options-grid{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  .form-group{border-right:none}
+  .factory-stats{grid-template-columns:repeat(2,1fr);padding:32px 20px}
+  .factory-hero{height:400px}
+  .factory-gallery{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer{padding:40px 20px 24px}
+  .nav{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <a href="#" class="nav-logo"><span class="logo-mark">C</span>CHRONOCRAFT</a>
+  <div class="nav-links">
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#factory">Factory</a>
+    <a href="#customization">Customize</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <span class="nav-phone">📞 +86 138 0000 0000</span>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge sr"><span class="badge-dot"></span>OEM · ODM · Private Label Manufacturing</div>
+      <h1 class="sr">Precision Timepiece<br>Manufacturing<br>for <span class="accent">Your Brand</span></h1>
+      <p class="hero-desc sr">From bespoke dial design to full private-label programs — we manufacture precision timepieces for brands, retailers, and corporate buyers across 60+ countries.</p>
+      <div class="hero-btns sr">
+        <a href="#contact" class="btn btn-primary">Request a Quote →</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+      </div>
+      <div class="hero-kpis sr">
+        <div class="kpi"><div class="kpi-num">18<span>+</span></div><div class="kpi-label">Years Mfg.</div></div>
+        <div class="kpi"><div class="kpi-num">500<span>+</span></div><div class="kpi-label">Brand Clients</div></div>
+        <div class="kpi"><div class="kpi-num">60<span>+</span></div><div class="kpi-label">Countries</div></div>
+        <div class="kpi"><div class="kpi-num">50<span>pcs</span></div><div class="kpi-label">Min. Order</div></div>
+      </div>
+    </div>
+    <div class="hero-video">
+      <video autoplay muted loop playsinline>
+        <source src="factory-building-in-city-2026-01-20-22-48-54-utc.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="t-dot"></span>OEM Manufacturing</div>
+    <div class="ticker-item"><span class="t-dot"></span>Custom Dial Printing</div>
+    <div class="ticker-item"><span class="t-dot"></span>ODM Design Service</div>
+    <div class="ticker-item"><span class="t-dot"></span>Private Label Program</div>
+    <div class="ticker-item"><span class="t-dot"></span>Low MOQ from 50pcs</div>
+    <div class="ticker-item"><span class="t-dot"></span>Corporate Gifting</div>
+    <div class="ticker-item"><span class="t-dot"></span>CE · RoHS · SGS Certified</div>
+    <div class="ticker-item"><span class="t-dot"></span>Global Shipping · DDP</div>
+    <div class="ticker-item"><span class="t-dot"></span>OEM Manufacturing</div>
+    <div class="ticker-item"><span class="t-dot"></span>Custom Dial Printing</div>
+    <div class="ticker-item"><span class="t-dot"></span>ODM Design Service</div>
+    <div class="ticker-item"><span class="t-dot"></span>Private Label Program</div>
+    <div class="ticker-item"><span class="t-dot"></span>Low MOQ from 50pcs</div>
+    <div class="ticker-item"><span class="t-dot"></span>Corporate Gifting</div>
+    <div class="ticker-item"><span class="t-dot"></span>CE · RoHS · SGS Certified</div>
+    <div class="ticker-item"><span class="t-dot"></span>Global Shipping · DDP</div>
+  </div>
+</div>
+
+<!-- ===== PRODUCT SHOWCASE ===== -->
+<section class="section section-alt" id="products">
+  <div class="container">
+    <div class="section-header sr">
+      <div class="eyebrow">Our Collection</div>
+      <h2 class="section-title">200+ Designs Ready for<br>Your Brand</h2>
+      <p class="section-sub">From skeleton automatics to classic chronographs — explore our OEM/ODM catalog or bring your own design.</p>
+    </div>
+    <div class="products-grid sr">
+      <div class="product-card"><div class="product-badge">Skeleton</div><div class="product-card-img"><img src="IMG/pp-1.webp" alt="Transparent Skeleton Watch" loading="lazy"></div><div class="product-card-body"><h4>Transparent Skeleton Automatic</h4><p>Crystal case · White rubber strap · Miyota 9015</p></div></div>
+      <div class="product-card"><div class="product-badge">Chrono</div><div class="product-card-img"><img src="IMG/pp-3.webp" alt="Rose Gold Chronograph" loading="lazy"></div><div class="product-card-body"><h4>Rose Gold Chronograph</h4><p>316L PVD case · Rubber strap · Mecha-quartz</p></div></div>
+      <div class="product-card"><div class="product-badge">Sport</div><div class="product-card-img"><img src="IMG/pp-4.webp" alt="Sport Chronograph" loading="lazy"></div><div class="product-card-body"><h4>Sport Chronograph Rose</h4><p>Octagonal case · Rubber strap · 100M WR</p></div></div>
+      <div class="product-card"><div class="product-badge">Limited</div><div class="product-card-img"><img src="IMG/pp-5.png" alt="Camo Skeleton Watch" loading="lazy"></div><div class="product-card-body"><h4>Carbon Skeleton Red Camo</h4><p>Carbon fiber case · Camo rubber · Auto</p></div></div>
+      <div class="product-card"><div class="product-badge">Rainbow</div><div class="product-card-img"><img src="IMG/pp-6.png" alt="Rainbow Chronograph" loading="lazy"></div><div class="product-card-body"><h4>Rainbow Bezel Chronograph</h4><p>Black DLC case · Gemstone bezel · Skeleton dial</p></div></div>
+      <div class="product-card"><div class="product-badge">Diver</div><div class="product-card-img"><img src="IMG/pp-7.png" alt="Turquoise Diver Watch" loading="lazy"></div><div class="product-card-body"><h4>Tiffany Blue Sport</h4><p>Steel case · Turquoise dial · 200M WR</p></div></div>
+      <div class="product-card"><div class="product-badge">Pilot</div><div class="product-card-img"><img src="IMG/pp-8.png" alt="Blue Pilot Chronograph" loading="lazy"></div><div class="product-card-body"><h4>Blue Pilot Chronograph</h4><p>DLC case · Blue rubber · Orange accents</p></div></div>
+      <div class="product-card"><div class="product-badge">Classic</div><div class="product-card-img"><img src="IMG/pp-9.png" alt="Rose Gold Blue Dial" loading="lazy"></div><div class="product-card-body"><h4>Rose Gold Aqua Dial</h4><p>Rose PVD case · White rubber · Skeleton dial</p></div></div>
+      <div class="product-card"><div class="product-badge">Heritage</div><div class="product-card-img"><img src="IMG/pp-2.png" alt="Rose Gold Heritage" loading="lazy"></div><div class="product-card-body"><h4>Heritage Rose Gold</h4><p>Tonneau case · Leather strap · Auto chrono</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUYER TABS ===== -->
+<section class="section" id="buyers">
+  <div class="container">
+    <div class="section-header sr">
+      <div class="eyebrow">Who We Work With</div>
+      <h2 class="section-title">Solutions for Every<br>Type of Buyer</h2>
+    </div>
+    <div class="tabs-bar sr">
+      <div class="tab-btn active" data-tab="0"><div class="tab-emoji">🇺🇸🇬🇧🇩🇪</div><div class="tab-title">Western Brands & Retailers</div><div class="tab-sub">EU · US · UK · Australia</div></div>
+      <div class="tab-btn" data-tab="1"><div class="tab-emoji">🇦🇪🇸🇬🇲🇾</div><div class="tab-title">Middle East & SE Asia</div><div class="tab-sub">UAE · Saudi · Singapore · Malaysia</div></div>
+      <div class="tab-btn" data-tab="2"><div class="tab-emoji">🎁</div><div class="tab-title">Corporate & Gift Buyers</div><div class="tab-sub">Events · Awards · VIP Gifting</div></div>
+    </div>
+    <div class="tab-panel active sr" data-panel="0">
+      <div class="panel-left">
+        <div class="panel-tag">Perfect for: DTC brands, Amazon sellers, retail chains</div>
+        <h3 class="panel-title">Your design vision,<br>our factory precision</h3>
+        <p class="panel-desc">We understand western brand standards — CE/RoHS documentation, DTC-ready packaging, and the quality your customers expect.</p>
+        <div class="feature-list">
+          <div class="feature-item"><div class="feature-icon">📐</div><div class="feature-content"><div class="f-title">Full OEM Development Support</div><div class="f-desc">Technical drawings, 3D rendering, physical samples — end-to-end project management.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">🧾</div><div class="feature-content"><div class="f-title">EU/US Compliance Documentation</div><div class="f-desc">CE declaration, RoHS report, English manual, Amazon FBA compliance package.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">📦</div><div class="feature-content"><div class="f-title">Branded Packaging Design</div><div class="f-desc">Custom watch box, pillow, warranty card, hang tags to your specs.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">🔒</div><div class="feature-content"><div class="f-title">NDA & IP Protection</div><div class="f-desc">NDA signed before any design sharing. Your brand assets never disclosed.</div></div></div>
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="moq-big"><div class="moq-num">200<span class="moq-unit">pcs</span></div><div class="moq-label">Minimum order quantity</div></div>
+        <ul class="checklist"><li>35–50 day lead time after sample approval</li><li>Japanese or Swiss movement options</li><li>Sapphire or mineral crystal</li><li>Free 3D rendering before production</li><li>Third-party QC inspectors welcome</li><li>FOB / CIF / DDP trade terms</li><li>Repeat orders: faster turnaround</li></ul>
+      </div>
+    </div>
+    <div class="tab-panel" data-panel="1">
+      <div class="panel-left">
+        <div class="panel-tag">Perfect for: Wholesale importers, regional distributors</div>
+        <h3 class="panel-title">Volume pricing,<br>flexible programs</h3>
+        <p class="panel-desc">Consistent supply, clean documentation, and logistics experience across the Gulf and ASEAN corridors.</p>
+        <div class="feature-list">
+          <div class="feature-item"><div class="feature-icon">💰</div><div class="feature-content"><div class="f-title">Tiered Volume Pricing</div><div class="f-desc">Graduated pricing tiers. Annual framework agreements lock in preferential rates.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">🚢</div><div class="feature-content"><div class="f-title">Gulf & ASEAN Logistics</div><div class="f-desc">Regular shipments to Dubai, Riyadh, Singapore, KL. Full customs docs.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">🗂</div><div class="feature-content"><div class="f-title">ODM Catalog Access</div><div class="f-desc">200+ ready-made designs available for private labeling.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">🤝</div><div class="feature-content"><div class="f-title">Flexible Payment Terms</div><div class="f-desc">New clients: T/T 30/70. Long-term partners: up to Net-60.</div></div></div>
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="moq-big"><div class="moq-num">50<span class="moq-unit">pcs</span></div><div class="moq-label">Minimum order quantity</div></div>
+        <ul class="checklist"><li>30–45 day lead time for ODM orders</li><li>Arabic packaging & manual support</li><li>Halal-compliant material options</li><li>Arabic-speaking customer service</li><li>Dubai Watch Week exhibitor</li><li>Factory visit welcome</li><li>Repeat orders: 2-week express</li></ul>
+      </div>
+    </div>
+    <div class="tab-panel" data-panel="2">
+      <div class="panel-left">
+        <div class="panel-tag">Perfect for: Fortune 500, event organizers, gifting agencies</div>
+        <h3 class="panel-title">A gift they'll wear<br>for a decade</h3>
+        <p class="panel-desc">Individual case-back engraving to luxury presentation boxes — corporate gifting that looks world-class.</p>
+        <div class="feature-list">
+          <div class="feature-item"><div class="feature-icon">🔧</div><div class="feature-content"><div class="f-title">Logo Engraving & Personalization</div><div class="f-desc">Laser engraving on caseback, logo on dial, brand colors on strap.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">🎁</div><div class="feature-content"><div class="f-title">Premium Gift Box Options</div><div class="f-desc">Rigid box, wooden case, custom ribbon — individual engraving per recipient.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">⚡</div><div class="feature-content"><div class="f-title">Event-Ready Delivery</div><div class="f-desc">Rush production available. Express courier direct to any country.</div></div></div>
+          <div class="feature-item"><div class="feature-icon">📋</div><div class="feature-content"><div class="f-title">Bulk Invoicing & VAT Docs</div><div class="f-desc">Commercial invoice, packing list, certificate of origin provided.</div></div></div>
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="moq-big"><div class="moq-num">50<span class="moq-unit">pcs</span></div><div class="moq-label">Corporate gift minimum</div></div>
+        <ul class="checklist"><li>25–35 day standard turnaround</li><li>Individual caseback engraving per unit</li><li>Gift box included in unit price</li><li>Unboxing-ready — no assembly needed</li><li>Trusted by Fortune 500 procurement</li><li>Free design mockup within 48 hours</li><li>Repeat orders: 2-week express</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-header sr"><div class="eyebrow">Our Services</div><h2 class="section-title">Four Manufacturing Programs</h2></div>
+    <div class="services-grid sr">
+      <div class="service-card"><div class="service-num">01</div><div class="service-icon">⚙️</div><h3 class="service-name">OEM</h3><p class="service-desc">Your complete design, manufactured to spec. We handle engineering, prototyping, and mass production.</p><div class="service-moq">MOQ: 200 pcs</div><div class="service-tags"><span>Your Design</span><span>Full Custom</span><span>Swiss/JP Mvt</span></div></div>
+      <div class="service-card"><div class="service-num">02</div><div class="service-icon">✏️</div><h3 class="service-name">ODM</h3><p class="service-desc">Pick from 200+ proven designs. Customize dial, strap, logo, packaging — launch fast.</p><div class="service-moq">MOQ: 50 pcs</div><div class="service-tags"><span>200+ Designs</span><span>Quick Launch</span><span>Logo Custom</span></div></div>
+      <div class="service-card"><div class="service-num">03</div><div class="service-icon">🎨</div><h3 class="service-name">Custom Dial & Strap</h3><p class="service-desc">Standalone dial printing, strap manufacturing, and engraving for existing models.</p><div class="service-moq">MOQ: 100 pcs/variant</div><div class="service-tags"><span>Color Print</span><span>Custom Strap</span><span>Engraving</span></div></div>
+      <div class="service-card"><div class="service-num">04</div><div class="service-icon">🔬</div><h3 class="service-name">Sample & Proto</h3><p class="service-desc">Start with a 3D render or physical prototype before committing to production.</p><div class="service-moq">From 1–5 pcs</div><div class="service-tags"><span>3D Render</span><span>15–25 Days</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FACTORY (IMAGE-HEAVY) ===== -->
+<section class="factory" id="factory">
+  <div class="factory-hero">
+    <img src="IMG/the-process-of-repair-of-mechanical-watches-2026-01-11-09-45-44-utc.jpg" alt="Watch craftsman assembling movement" loading="lazy">
+    <div class="factory-hero-overlay">
+      <div class="factory-hero-content sr">
+        <div class="eyebrow">Our Factory</div>
+        <h2>15,000m² of Precision Manufacturing</h2>
+        <p>Established in 2006, our Guangdong facility houses 300+ skilled workers, CNC machining centers, PVD coating lines, and a climate-controlled assembly clean room.</p>
+        <a href="#contact" class="btn btn-primary" style="background:#fff;color:var(--green-dark)">Schedule a Factory Tour →</a>
+      </div>
+    </div>
+  </div>
+  <div class="factory-stats">
+    <div class="factory-stat"><div class="fs-num">300<span>+</span></div><div class="fs-label">Skilled Workers</div></div>
+    <div class="factory-stat"><div class="fs-num">15<span>K</span></div><div class="fs-label">m² Facility</div></div>
+    <div class="factory-stat"><div class="fs-num">500<span>K</span></div><div class="fs-label">Annual Capacity</div></div>
+    <div class="factory-stat"><div class="fs-num">12<span>pt</span></div><div class="fs-label">QC Per Unit</div></div>
+  </div>
+  <div class="factory-gallery">
+    <div class="factory-gallery-item"><img src="https://images.pexels.com/photos/3846508/pexels-photo-3846508.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="CNC machining watch cases" loading="lazy"><div class="fg-label">CNC Machining Center</div></div>
+    <div class="factory-gallery-item"><img src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Precision manufacturing" loading="lazy"><div class="fg-label">Precision Assembly Line</div></div>
+    <div class="factory-gallery-item"><img src="https://images.pexels.com/photos/28806603/pexels-photo-28806603.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Factory worker operating machinery" loading="lazy"><div class="fg-label">Quality Control Station</div></div>
+  </div>
+</section>
+
+<!-- ===== CUSTOMIZATION EXPLORER ===== -->
+<section class="section section-alt" id="customization">
+  <div class="container">
+    <div class="section-header sr"><div class="eyebrow">Customization Options</div><h2 class="section-title">Every Detail, Your Way</h2><p class="section-sub">Explore what you can customize — from the movement inside to the box it ships in.</p></div>
+    <div class="custom-layout sr">
+      <div class="custom-nav">
+        <div class="custom-nav-item active" data-custom="0"><span class="cn-dot"></span><div><div class="cn-title">Watch Dial</div><div class="cn-sub">Face & printing</div></div></div>
+        <div class="custom-nav-item" data-custom="1"><span class="cn-dot"></span><div><div class="cn-title">Case & Crystal</div><div class="cn-sub">Material & finish</div></div></div>
+        <div class="custom-nav-item" data-custom="2"><span class="cn-dot"></span><div><div class="cn-title">Straps</div><div class="cn-sub">Material & style</div></div></div>
+        <div class="custom-nav-item" data-custom="3"><span class="cn-dot"></span><div><div class="cn-title">Movement</div><div class="cn-sub">Engine options</div></div></div>
+        <div class="custom-nav-item" data-custom="4"><span class="cn-dot"></span><div><div class="cn-title">Packaging</div><div class="cn-sub">Box & accessories</div></div></div>
+      </div>
+      <div class="custom-panel active" data-cpanel="0"><h3 class="custom-panel-title">Dial Customization</h3><p class="custom-panel-desc">The dial is your brand's canvas. Full-print, hand-applied indices, guilloche textures, luminous coating, and more.</p><div class="options-grid"><div class="option-card"><div class="option-emoji">🖨</div><div class="option-name">Full Color Print</div><div class="option-spec">Pantone matched · UV stable</div></div><div class="option-card"><div class="option-emoji">✨</div><div class="option-name">Sunray Finishing</div><div class="option-spec">Silver · Gold · Blue · Black</div></div><div class="option-card"><div class="option-emoji">💎</div><div class="option-name">Guilloche Pattern</div><div class="option-spec">Classic · Clous de Paris</div></div><div class="option-card"><div class="option-emoji">🌙</div><div class="option-name">Lume Coating</div><div class="option-spec">Superluminova® C3 / BGW9</div></div><div class="option-card"><div class="option-emoji">🔵</div><div class="option-name">Skeleton / Open Heart</div><div class="option-spec">Movement visible dial</div></div><div class="option-card"><div class="option-emoji">🔤</div><div class="option-name">Logo & Text</div><div class="option-spec">Brand name · Tagline · City</div></div></div><div class="custom-note">Physical dial sample provided before production. Pantone color matching available.</div></div>
+      <div class="custom-panel" data-cpanel="1"><h3 class="custom-panel-title">Case & Crystal</h3><p class="custom-panel-desc">Choose the perfect shell — from surgical steel to lightweight titanium, with sapphire or mineral crystal.</p><div class="options-grid"><div class="option-card"><div class="option-emoji">🏗</div><div class="option-name">316L Stainless Steel</div><div class="option-spec">Industry standard · Durable</div></div><div class="option-card"><div class="option-emoji">⚫</div><div class="option-name">IP Black / Gold PVD</div><div class="option-spec">Physical vapor deposition</div></div><div class="option-card"><div class="option-emoji">🔩</div><div class="option-name">Titanium</div><div class="option-spec">Grade 2 · Lightweight</div></div><div class="option-card"><div class="option-emoji">💎</div><div class="option-name">Sapphire Crystal</div><div class="option-spec">9 Mohs · AR coated</div></div><div class="option-card"><div class="option-emoji">🔵</div><div class="option-name">Mineral Crystal</div><div class="option-spec">Cost-effective · Hardened</div></div><div class="option-card"><div class="option-emoji">💧</div><div class="option-name">Water Resistance</div><div class="option-spec">30M · 50M · 100M · 200M</div></div></div><div class="custom-note">Case back engraving available. Exhibition caseback option available.</div></div>
+      <div class="custom-panel" data-cpanel="2"><h3 class="custom-panel-title">Strap Options</h3><p class="custom-panel-desc">From Italian leather to stainless mesh — match the strap to your brand's identity.</p><div class="options-grid"><div class="option-card"><div class="option-emoji">🟤</div><div class="option-name">Genuine Leather</div><div class="option-spec">Italian · Crocodile · Suede</div></div><div class="option-card"><div class="option-emoji">🧱</div><div class="option-name">Silicone / Rubber</div><div class="option-spec">Sport · Diver · Molded</div></div><div class="option-card"><div class="option-emoji">🪖</div><div class="option-name">NATO Nylon</div><div class="option-spec">200+ color combinations</div></div><div class="option-card"><div class="option-emoji">🔗</div><div class="option-name">Milanese Mesh</div><div class="option-spec">316L · Gold PVD · Rose Gold</div></div><div class="option-card"><div class="option-emoji">⛓</div><div class="option-name">Oyster / Jubilee</div><div class="option-spec">Full steel bracelet</div></div><div class="option-card"><div class="option-emoji">🔧</div><div class="option-name">Custom Clasp</div><div class="option-spec">Logo on deployment clasp</div></div></div><div class="custom-note">Quick-release standard. Width 16–24mm. Embossed logo available.</div></div>
+      <div class="custom-panel" data-cpanel="3"><h3 class="custom-panel-title">Movement Options</h3><p class="custom-panel-desc">Japanese reliability or Swiss prestige — pick the heart that fits your brand.</p><div class="options-grid"><div class="option-card"><div class="option-emoji">⏱</div><div class="option-name">Miyota 9015</div><div class="option-spec">Auto · 24 jewels · ±10 s/d</div></div><div class="option-card"><div class="option-emoji">🔄</div><div class="option-name">Seiko NH35/NH38</div><div class="option-spec">Auto · Hackable · No date</div></div><div class="option-card"><div class="option-emoji">🇨🇭</div><div class="option-name">ETA 2824-2</div><div class="option-spec">Swiss Auto · COSC grade</div></div><div class="option-card"><div class="option-emoji">⚡</div><div class="option-name">Ronda Quartz</div><div class="option-spec">Swiss · ±10 s/yr</div></div><div class="option-card"><div class="option-emoji">🔁</div><div class="option-name">Miyota Quartz</div><div class="option-spec">Japanese · Cost-effective</div></div><div class="option-card"><div class="option-emoji">🔭</div><div class="option-name">Skeleton Movement</div><div class="option-spec">Visible · Decorated bridges</div></div></div><div class="custom-note">Rotor customization 500pcs+. Chronograph & GMT available on request.</div></div>
+      <div class="custom-panel" data-cpanel="4"><h3 class="custom-panel-title">Packaging Options</h3><p class="custom-panel-desc">First impressions matter. Make the unboxing unforgettable.</p><div class="options-grid"><div class="option-card"><div class="option-emoji">📦</div><div class="option-name">Premium Rigid Box</div><div class="option-spec">Magnetic closure · Pillow</div></div><div class="option-card"><div class="option-emoji">🪵</div><div class="option-name">Wooden Presentation</div><div class="option-spec">Bamboo · Walnut · Cherry</div></div><div class="option-card"><div class="option-emoji">🎀</div><div class="option-name">Drawer Gift Box</div><div class="option-spec">Ribbon pull · Foam insert</div></div><div class="option-card"><div class="option-emoji">🏷</div><div class="option-name">Hang Tags & Cards</div><div class="option-spec">Warranty · Brand story</div></div><div class="option-card"><div class="option-emoji">✍</div><div class="option-name">Individual Engraving</div><div class="option-spec">Name / message per unit</div></div><div class="option-card"><div class="option-emoji">🧴</div><div class="option-name">Watch Cloth & Tool</div><div class="option-spec">Microfiber · Adjustment pin</div></div></div><div class="custom-note">Amazon FBA labeling available. Master carton optimized for freight.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS (Image + Text Rows) ===== -->
+<section class="section" id="process" style="padding:0">
+  <div class="section-header sr" style="text-align:center;display:flex;flex-direction:column;align-items:center;padding:96px 32px 56px">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="section-title">Inquiry to Delivery</h2>
+    <p class="section-sub" style="text-align:center">Four clear steps from your first message to watches in hand. No surprises.</p>
+  </div>
+  <div class="process-rows sr">
+    <div class="pr-row">
+      <div class="pr-img"><span class="pr-step-badge">01</span><img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Business consultation and inquiry" loading="lazy"></div>
+      <div class="pr-text"><div class="pr-icon">💬</div><h3>Inquiry & Consultation</h3><p>Submit your brief — service type, quantity, timeline, and target price. Our team responds within 1 business day with feasibility analysis and transparent pricing.</p><span class="pr-time">Response within 24 hours</span></div>
+    </div>
+    <div class="pr-row">
+      <div class="pr-img"><span class="pr-step-badge">02</span><img src="https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Design and 3D rendering process" loading="lazy"></div>
+      <div class="pr-text"><div class="pr-icon">✏️</div><h3>Design & Sample</h3><p>3D rendering or physical sample for your approval. OEM clients review technical drawings; ODM clients select from 200+ designs and customize freely.</p><span class="pr-time">15–25 days for prototype</span></div>
+    </div>
+    <div class="pr-row">
+      <div class="pr-img"><span class="pr-step-badge">03</span><img src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Factory production line manufacturing" loading="lazy"></div>
+      <div class="pr-text"><div class="pr-icon">🏭</div><h3>Production</h3><p>Upon approval and deposit, production begins on our 15,000m² factory floor. Weekly photo updates sent to your inbox. Third-party inspectors always welcome.</p><span class="pr-time">30–60 days batch production</span></div>
+    </div>
+    <div class="pr-row">
+      <div class="pr-img"><span class="pr-step-badge">04</span><img src="https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Quality control and shipping" loading="lazy"></div>
+      <div class="pr-text"><div class="pr-icon">📦</div><h3>QC & Shipping</h3><p>Every single piece passes our 12-point quality inspection. All customs documents prepared. Ship via DDP, FOB, or DHL Express worldwide.</p><span class="pr-time">3–7 days global delivery</span></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section section-alt" id="testimonials">
+  <div class="container">
+    <div class="section-header sr"><div class="eyebrow">Client Testimonials</div><h2 class="section-title">Trusted Across Every Continent</h2></div>
+    <div class="test-grid sr">
+      <div class="test-card"><div class="test-region">Western Europe · DTC Brand</div><div class="test-stars">★★★★★</div><p class="test-quote">"We launched our watch line with zero manufacturing experience. Their team guided us through every step — design files, dial approval, packaging. Three years later, they're still our only partner."</p><div class="test-author"><div class="test-avatar">M</div><div><div class="test-name">Marcus B.</div><div class="test-role">CEO · Nordvik Watches · Sweden</div></div></div></div>
+      <div class="test-card"><div class="test-region">Middle East · Wholesale</div><div class="test-stars">★★★★★</div><p class="test-quote">"We import 3,000+ units per quarter for our UAE and Saudi network. Lead times are consistent, documentation always clean for customs, and the Arabic packaging option is a huge selling point."</p><div class="test-author"><div class="test-avatar">F</div><div><div class="test-name">Fatima Al-Rashid</div><div class="test-role">Director · Gulf Prestige Trading · UAE</div></div></div></div>
+      <div class="test-card"><div class="test-region">North America · Amazon</div><div class="test-stars">★★★★★</div><p class="test-quote">"I needed CE docs, FBA-ready carton labels, and consistent quality for my Amazon store. They delivered everything without me having to explain. Most plug-and-play factory I've worked with."</p><div class="test-author"><div class="test-avatar">D</div><div><div class="test-name">David L.</div><div class="test-role">Amazon Brand Owner · US</div></div></div></div>
+      <div class="test-card"><div class="test-region">SE Asia · Corporate</div><div class="test-stars">★★★★★</div><p class="test-quote">"800 branded watches for our company awards — individual engraving, luxury wooden boxes, logo on dial. Our leadership team looked world-class."</p><div class="test-author"><div class="test-avatar">R</div><div><div class="test-name">Rachel Tan</div><div class="test-role">Procurement · TechAsia · Singapore</div></div></div></div>
+      <div class="test-card"><div class="test-region">Europe · Boutique</div><div class="test-stars">★★★★★</div><p class="test-quote">"The ODM catalog gave us a beautiful base design we made our own. Low MOQ let us test the market first. Now it's our best-seller."</p><div class="test-author"><div class="test-avatar">L</div><div><div class="test-name">Laurent M.</div><div class="test-role">Owner · Maison Laurent · France</div></div></div></div>
+      <div class="test-card"><div class="test-region">SE Asia · Distributor</div><div class="test-stars">★★★★★</div><p class="test-quote">"This is the only factory that proactively sends QC photos, flags delays early, and actually understands what 'brand quality' means."</p><div class="test-author"><div class="test-avatar">A</div><div><div class="test-name">Ahmad S.</div><div class="test-role">MD · Prestige Distribution · Malaysia</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner sr">
+  <div class="cta-left"><h2>Ready to Build Your<br>Watch Brand?</h2><p>Free consultation · No obligation · Response within 24 hours</p></div>
+  <div class="cta-right"><a href="#contact" class="btn-white">Start Your Inquiry →</a></div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header sr"><div class="eyebrow">Contact Us</div><h2 class="section-title">Let's Talk About Your Project</h2></div>
+    <div class="contact-layout sr">
+      <div>
+        <p class="contact-intro">"Tell us about your brand, your vision, and your target quantity. We'll come back with a detailed quote and sample plan within 2 business days."</p>
+        <div class="contact-list">
+          <div class="contact-row"><span class="cl-label">Email</span><span class="cl-value"><a href="mailto:oem@chronocraft.com">oem@chronocraft.com</a></span></div>
+          <div class="contact-row"><span class="cl-label">WhatsApp</span><span class="cl-value"><a href="https://wa.me/8613800000000" target="_blank">+86 138 0000 0000</a></span></div>
+          <div class="contact-row"><span class="cl-label">WeChat</span><span class="cl-value">chronocraft_oem</span></div>
+          <div class="contact-row"><span class="cl-label">Skype</span><span class="cl-value">chrono.oem.trade</span></div>
+          <div class="contact-row"><span class="cl-label">Factory</span><span class="cl-value">Guangdong Province, China</span></div>
+          <div class="contact-row"><span class="cl-label">Hours</span><span class="cl-value">Mon–Fri · 09:00–18:00 CST</span></div>
+        </div>
+        <div class="lang-tags"><span class="lang-tag">🇺🇸 English</span><span class="lang-tag">🇸🇦 Arabic</span><span class="lang-tag">🇩🇪 Deutsch</span><span class="lang-tag">🇫🇷 Français</span><span class="lang-tag">🇨🇳 中文</span></div>
+      </div>
+      <div>
+        <form class="inquiry-form" id="inquiryForm">
+          <div class="form-row"><div class="form-group"><label>First Name *</label><input type="text" placeholder="John" required></div><div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div></div>
+          <div class="form-row"><div class="form-group"><label>Company / Brand</label><input type="text" placeholder="Acme Watch Co."></div><div class="form-group"><label>Country *</label><input type="text" placeholder="Germany" required></div></div>
+          <div class="form-row"><div class="form-group"><label>Business Email *</label><input type="email" placeholder="you@company.com" required></div><div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+1 555..."></div></div>
+          <div class="form-row"><div class="form-group"><label>Service Type *</label><select required><option value="" disabled selected>Select service...</option><option>OEM — I have my own design</option><option>ODM — Customize existing designs</option><option>Custom Dial / Strap only</option><option>Private Label (full turnkey)</option><option>Corporate Gifting (50pcs+)</option><option>Sample / Prototype first</option><option>Not sure — need consultation</option></select></div><div class="form-group"><label>Estimated Quantity</label><select><option value="" disabled selected>Select quantity...</option><option>Sample (1–5)</option><option>50–199</option><option>200–499</option><option>500–999</option><option>1,000–4,999</option><option>5,000+</option></select></div></div>
+          <div class="form-row full"><div class="form-group"><label>Project Details</label><textarea placeholder="Describe your project: watch style, movement type, dial design, strap preference, target unit price, delivery deadline..."></textarea></div></div>
+          <div class="form-row"><div class="form-group"><label>Budget Per Unit</label><select><option value="" disabled selected>Select budget...</option><option>Under $15/pc</option><option>$15–$30</option><option>$30–$60</option><option>$60–$120</option><option>$120+</option><option>Flexible</option></select></div><div class="form-group"><label>How Did You Find Us</label><select><option value="" disabled selected>Select...</option><option>Google</option><option>Alibaba</option><option>Trade Show</option><option>Referral</option><option>Social Media</option><option>Other</option></select></div></div>
+          <div class="form-footer"><div class="form-note">🔒 Your information is confidential. We sign NDAs before reviewing design files. Response within 48 hours.</div><button type="submit" class="form-submit">Send Inquiry →</button></div>
+        </form>
+        <div class="form-success" id="formSuccess"><div class="fs-icon">✅</div><h3>Inquiry Received. Thank You.</h3><p>Our team will respond with a detailed quote within 2 business days.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="fb-logo"><span class="logo-mark">C</span>CHRONOCRAFT</div><div class="fb-tagline">Your Brand. Our Craft.</div><div class="fb-est">Est. 2006 · Guangdong, China</div></div>
+    <div class="footer-col"><h5>Services</h5><a href="#services">OEM Manufacturing</a><a href="#services">ODM Design Service</a><a href="#services">Custom Dial & Strap</a><a href="#services">Sample & Prototyping</a><a href="#customization">Customization Options</a></div>
+    <div class="footer-col"><h5>Markets</h5><a href="#buyers">Western Brands</a><a href="#buyers">Middle East Importers</a><a href="#buyers">SE Asia Distributors</a><a href="#buyers">Corporate Buyers</a><a href="#buyers">Amazon & DTC Sellers</a></div>
+    <div class="footer-col"><h5>Contact</h5><a href="mailto:oem@chronocraft.com">oem@chronocraft.com</a><a href="https://wa.me/8613800000000">WhatsApp: +86 138 0000 0000</a><a href="#contact">Request a Quote</a><a href="#capabilities">Factory Capabilities</a><a href="#trust">Certifications</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2025 CHRONOCRAFT Manufacturing</span><div><a href="#">Privacy Policy</a><a href="#">NDA Request</a><a href="#">Sitemap</a></div></div>
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+/* Scroll Reveal */
+(function(){
+  var els=document.querySelectorAll('.sr');
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+    });
+  },{threshold:0.06});
+  els.forEach(function(el){obs.observe(el)});
+})();
+
+/* Buyer Tabs */
+(function(){
+  var btns=document.querySelectorAll('.tab-btn');
+  var panels=document.querySelectorAll('.tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var t=this.getAttribute('data-tab');
+      btns.forEach(function(b){b.classList.remove('active')});
+      panels.forEach(function(p){p.classList.remove('active')});
+      this.classList.add('active');
+      document.querySelector('.tab-panel[data-panel="'+t+'"]').classList.add('active');
+    });
+  });
+})();
+
+/* Customization Explorer */
+(function(){
+  var navs=document.querySelectorAll('.custom-nav-item');
+  var cpanels=document.querySelectorAll('.custom-panel');
+  navs.forEach(function(nav){
+    nav.addEventListener('click',function(){
+      var c=this.getAttribute('data-custom');
+      navs.forEach(function(n){n.classList.remove('active')});
+      cpanels.forEach(function(p){p.classList.remove('active')});
+      this.classList.add('active');
+      document.querySelector('.custom-panel[data-cpanel="'+c+'"]').classList.add('active');
+    });
+  });
+})();
+
+/* Form */
+(function(){
+  var form=document.getElementById('inquiryForm');
+  var success=document.getElementById('formSuccess');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    form.style.display='none';
+    success.style.display='block';
+  });
+})();
+
+/* Smooth Scroll */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var target=document.querySelector(this.getAttribute('href'));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
+</body>
+</html>
